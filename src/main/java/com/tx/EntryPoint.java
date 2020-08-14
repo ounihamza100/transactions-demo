@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = UserRepository.class)
-@EnableTransactionManagement
 public class EntryPoint {
 
     public static void main(String[] args) {

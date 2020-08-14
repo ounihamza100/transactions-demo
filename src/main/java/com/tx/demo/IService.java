@@ -11,5 +11,6 @@ public interface IService {
     Optional<User> saveUserWithoutTransaction(User user);
     Optional<User> saveUserWithinTransaction(User user);
     Long registerUser(User user);
+    Long mandatoryTransactions(User user);
 
 }

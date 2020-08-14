@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
+    private UserService2 userService2;
+
+    @Autowired
     private UserService userService;
 
     @PostMapping("/save")
@@ -28,5 +31,10 @@ public class UserController {
     @PostMapping("/register")
     Long registerUser(@RequestBody User user) {
         return  userService.registerUser(user);
+    }
+
+    @PostMapping("/mandatoryTransactions")
+    Long mandatoryTransactions(@RequestBody User user) {
+        return  userService2.test(user);
     }
 }
